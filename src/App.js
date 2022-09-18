@@ -1,5 +1,6 @@
 import React from "react";
 import Search from "./Search";
+import Weather from "./Weather";
 
 export default function App() {
   return (
@@ -7,6 +8,7 @@ export default function App() {
       <div className="container">
         <h1>Weather Search Engine</h1>
         <Search />
+        <Weather />
         <footer>
           <p>
             Coded By Carly B on{" "}
