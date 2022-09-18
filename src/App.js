@@ -1,8 +1,4 @@
-import logo from "./logo.svg";
-import "./App.css";
-
 import React from "react";
-import "./styles.css";
 import Search from "./Search";
 
 export default function App() {
@@ -10,6 +6,16 @@ export default function App() {
     <div className="App">
       <h1>Weather Search Engine</h1>
       <Search />
+      <footer>
+        <p>
+          Coded By Carly B on{" "}
+          <a href="https://github.com/Aznaia/weather-app-react">GitHub</a> and
+          hosted by{" "}
+          <a href="https://app.netlify.com/sites/meek-klepon-fc456b/overview">
+            Netlify
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
