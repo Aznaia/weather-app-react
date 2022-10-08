@@ -18,10 +18,21 @@ export default function Search() {
   }
 
   return (
-    <div>
+    <div className="Search-bar">
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Type a city" onChange={updateCity} />
-        <input type="submit" value="Search" />
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="text"
+              placeholder="Type a city"
+              className="form-control"
+              onChange={updateCity}
+            />
+          </div>
+          <div className="col-3">
+            <input type="submit" value="Search" className="btn btn-primary" />
+          </div>
+        </div>
       </form>
       <h2>{message}</h2>
     </div>

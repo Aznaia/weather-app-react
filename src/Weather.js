@@ -1,9 +1,11 @@
 import React from "react";
 import "./Weather.css";
+import Search from "./Search.js";
 
 export default function Weather() {
   return (
     <div className="Weather">
+      <Search />
       <h1>Seattle</h1>
       <ul>
         <li>Day Time</li>
@@ -25,10 +27,6 @@ export default function Weather() {
           </ul>
         </div>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Type a city" onChange={updateCity} />
-        <input type="submit" value="Search" />
-      </form>
     </div>
   );
 }
