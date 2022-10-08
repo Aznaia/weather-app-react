@@ -1,8 +1,14 @@
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .App .title {
+  margin: 16px;
   text-align: center;
 }
 
 .App p {
   font-size: small;
-  margin: 20px auto;
+  margin: 5px auto;
 }

@@ -24,13 +24,18 @@ export default function Search() {
           <div className="col-9">
             <input
               type="text"
-              placeholder="Type a city"
+              placeholder="Type a city..."
               className="form-control"
+              autoFocus="on"
               onChange={updateCity}
             />
           </div>
           <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-primary" />
+            <input
+              type="submit"
+              value="Search"
+              className="btn btn-primary w-100"
+            />
           </div>
         </div>
       </form>

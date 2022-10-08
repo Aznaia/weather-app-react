@@ -11,10 +11,18 @@ export default function Weather() {
         <li>Day Time</li>
         <li>Description</li>
       </ul>
-      <div className="row">
+      <div className="row mt-3">
         <div className="col-6">
-          <img src={"./Rainy.png"} alt="rainy" />
-          Temp
+          <div className="clearfix">
+            <img
+              src="https://freepngimg.com/thumb/heart/91984-blue-heart-drop-cloud-rain-png-file-hd.png"
+              alt="rainy"
+              className="float-left"
+            />
+
+            <span className="temperature">10</span>
+            <span className="unit">°C</span>
+          </div>
         </div>
         <div className="col-6">
           <ul>
