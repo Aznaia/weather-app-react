@@ -18,8 +18,9 @@ export default function Weather() {
               src="https://freepngimg.com/thumb/heart/91984-blue-heart-drop-cloud-rain-png-file-hd.png"
               alt="rainy"
               className="float-left"
+              width="64"
+              height="64"
             />
-
             <span className="temperature">10</span>
             <span className="unit">°C</span>
           </div>

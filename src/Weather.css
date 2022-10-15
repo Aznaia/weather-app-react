@@ -27,10 +27,17 @@
 .Weather img {
   display: inline-block;
   line-height: 64px;
-  max-width: 68px;
+  margin-right: 10px;
 }
 
 .Weather .temperature {
-  font-size: 60px;
+  font-size: 64px;
   line-height: 64px;
+  position: relative;
+  top: 15px;
+}
+
+.Weather .unit {
+  position: relative;
+  top: -20px;
 }
