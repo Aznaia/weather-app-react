@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import WeatherInfo from "./WeatherInfo";
-import Search from "./Search.js";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
+  const [city, setCity] = useState(props.defaultCity);
 
-  function displayWeather(response) {
-    console.log(response.data);
+  function handleResponse(response) {
     setWeatherData({
       loaded: true,
       temperature: response.data.main.temp,
@@ -21,18 +20,49 @@ export default function Weather(props) {
     });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "e937ae3f7a274820b678821bd8a9635d";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   if (weatherData.loaded) {
     return (
       <div className="Weather">
-        <Search />
+        <form onSubmit={handleSubmit}>
+          <div className="row">
+            <div className="col-9">
+              <input
+                type="text"
+                placeholder="Type a city..."
+                className="form-control"
+                autoFocus="on"
+                onChange={updateCity}
+              />
+            </div>
+          </div>
+          <div className="col-3">
+            <input
+              type="submit"
+              value="Search"
+              className="btn btn-primary w-100"
+            />
+          </div>
+        </form>
         <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
-    const apiKey = "e937ae3f7a274820b678821bd8a9635d";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(displayWeather);
-
+    search();
     return "Loading...";
   }
 }
