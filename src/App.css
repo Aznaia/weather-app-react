@@ -1,9 +1,12 @@
 .App {
+  font-family: Arial, Helvetica, sans-serif;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .App .title {
+  color: darkblue;
+  font-weight: 700;
   margin: 16px;
   text-align: center;
 }
