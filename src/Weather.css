@@ -6,8 +6,8 @@
 
 .Weather h1 {
   color: darkblue;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 550;
   line-height: 36px;
   margin: 10px 0 0 0;
 }
@@ -35,7 +35,7 @@
 
 .Weather .temperature {
   color: #212529;
-  font-size: 60px;
+  font-size: 56px;
   line-height: 74px;
   position: relative;
 }
