@@ -24,13 +24,9 @@
   list-style: none;
 }
 
-.Weather img {
-  background-color: hwb(0 50% 50% / 0.211);
-  border-radius: 45px;
+.Weather canvas {
   display: inline-block;
-  margin-right: 10px;
-  width: 84px;
-  height: auto;
+  margin-top: 5px;
 }
 
 .Weather a {
@@ -38,13 +34,13 @@
 }
 
 .Weather .temperature {
-  font-size: 64px;
-  line-height: 85px;
+  color: #212529;
+  font-size: 60px;
+  line-height: 74px;
   position: relative;
-  top: 15px;
 }
 
 .Weather .unit {
   position: relative;
-  top: -20px;
+  top: -30px;
 }
